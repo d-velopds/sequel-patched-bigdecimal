@@ -86,6 +86,7 @@ module Sequel
       end
       def RubyBigDecimal(r, i)
         if v = r.getBigDecimal(i)
+          binding.pry
           ::Kernel::BigDecimal(v.to_string)
         end
       end
